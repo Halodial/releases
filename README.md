@@ -21,13 +21,21 @@ macOS 14 Sonoma or later, on a Mac with Apple silicon.
 
 ## Installing
 
-1. Open `Halodial.dmg` and drag Halodial onto Applications.
-2. Open Halodial once. macOS says Apple could not verify it, because Halodial isn't notarized by Apple yet. Click **Done**.
-3. Open **System Settings › Privacy & Security**, scroll down and click **Open Anyway** next to Halodial, then confirm.
+**One line, no prompts** (paste into Terminal):
 
-   Or in Terminal: `xattr -dr com.apple.quarantine /Applications/Halodial.app`
+```sh
+curl -fsSL https://halodial.github.io/install.sh | sh
+```
 
-You only do this once. After that Halodial checks for updates daily and installs them itself (menu bar › Check for Updates…).
+**Homebrew, no prompts:**
+
+```sh
+brew tap halodial/tap && brew trust halodial/tap && brew install --cask halodial
+```
+
+**Or the disk image:** open `Halodial.dmg`, drag Halodial onto Applications and open it. macOS says Apple could not verify it, because Halodial isn't notarized by Apple yet: click **Done**, then **System Settings › Privacy & Security › Open Anyway**. You only do this once.
+
+Halodial checks for updates daily and installs them itself (menu bar › Check for Updates…).
 
 ## Files here
 
