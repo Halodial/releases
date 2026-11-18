@@ -22,8 +22,10 @@ macOS 14 Sonoma or later, on a Mac with Apple silicon.
 ## Installing
 
 1. Open `Halodial.dmg` and drag Halodial onto Applications.
-2. Open Halodial once. macOS says it can't check it for malicious software, because Halodial isn't notarized by Apple yet. Click **Done**.
+2. Open Halodial once. macOS says Apple could not verify it, because Halodial isn't notarized by Apple yet. Click **Done**.
 3. Open **System Settings › Privacy & Security**, scroll down and click **Open Anyway** next to Halodial, then confirm.
+
+   Or in Terminal: `xattr -dr com.apple.quarantine /Applications/Halodial.app`
 
 You only do this once. After that Halodial checks for updates daily and installs them itself (menu bar › Check for Updates…).
 
